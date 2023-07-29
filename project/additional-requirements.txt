@@ -1,0 +1,6 @@
+# jupyter, tensorflow and numpy are already installed
+pandas
+scikit-learn
+matplotlib
+pydantic
+opencv-python
