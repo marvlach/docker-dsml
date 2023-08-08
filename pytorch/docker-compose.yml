@@ -9,7 +9,7 @@ services:
     container_name: "project-pytorch-container"
     # restart: unless-stopped
     ports:
-      - "8899:8888"
+      - "8888:8888"
     environment:
       - "JUPYTER_ENABLE_LAB: yes"
       - "JUPYTER_TOKEN: docker"

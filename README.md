@@ -19,7 +19,7 @@ To start the container, pick the docker-compose.yml and run the command. This wi
 ```
 docker compose up -d
 ```
-The Jupyter lab server will run on http://localhost:8899. You can change that in docker-compose.yml. 
+The Jupyter lab server will run on http://localhost:8888, so the port should be available. You can change that in docker-compose.yml. 
 
 To access the Jupyter lab server you need to get the token required. To do that, run 
 ```
@@ -27,7 +27,7 @@ docker container logs --follow name_of_container
 ```
 where name_of_container should be replaced by the name of the container. By default, it's something like project-tensorflow-gpu-container, depending on the docker-compose.yml.
 
-At the end of the logs, there should be text like the following:
+After installation, at the end of the logs, there should be text like the following:
 
 ```
     To access the server, open this file in a browser:
@@ -36,4 +36,12 @@ At the end of the logs, there should be text like the following:
         http://e1d8a869b7a8:8888/lab?token=bca8ca8854018e14c505399f340061df6d9b29bb902fdd02
         http://127.0.0.1:8888/lab?token=bca8ca8854018e14c505399f340061df6d9b29bb902fdd02
 ```
-Copy the URL and change the port to 9988. For the example above the URL to visit is http://localhost:8899/lab?token=bca8ca8854018e14c505399f340061df6d9b29bb902fdd02
+or 
+```
+    Serving notebooks from local directory: /project
+    Jupyter Server 2.7.0 is running at:
+    http://d85c2b5400a3:8888/lab?token=43d4f71aef5fb87198cc27fc652ffc729dc82eef641e875f
+    http://127.0.0.1:8888/lab?token=43d4f71aef5fb87198cc27fc652ffc729dc82eef641e875f
+```
+
+Visit the URL http://localhost:8888/lab?token=bca8ca8854018e14c505399f340061df6d9b29bb902fdd02
